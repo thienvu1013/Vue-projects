@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <title>Getting Started</title>
+    <style>
+        .box{
+            padding:100px 0;
+            width:400px;
+            text-align: center;
+            background: #ddd;
+            margin:20px;
+            display:inline-block;
+        }
+    </style>
+    <!-- <style>
+        .fav{
+            background: red;
+        }
+    </style> -->
+</head>
+<body>
+    <h1>Hello, Vue</h1>
+    <div id="app">
+        <!-- <h2>I am the second template</h2> -->
+        <div v-if="showbooks">
+            <p>{{ title }}-{{ author }}-{{ age }}</p>
+        </div>
+
+        <button @click ="toggle">
+            <span v-if="showbooks">Hide books</span>
+            <span v-else>Show books</span>
+        </button>
+        <!-- <button @click = "increaseAge()">Increse age</button> -->
+        <div v-show="showbooks">currently showing books</div>
+        <br>
+
+
+        <!-- mouse events -->
+        <div class="box" @mouseover="handleEvent($event,5)">mouseover</div>
+        <div class="box" @mouseleave="handleEvent">mouseleave</div>
+        <div class="box" @dblclick="handleEvent">doubleclick</div>
+        <div class="box" @mousemove="handleMouseMove">postion {{ x }} - {{ y }}</div>
+        <br>
+
+
+        <!-- v-for -->
+        <div>
+            <ul>
+                <li v-for="item in filteredBooks" :class="{ fav: item.isFav }" @click="toggleFav(item)">
+                    {{ item.title }} - {{ item.author }}
+                </li>
+            </ul>
+        </div>
+        <br>
+
+        <!-- attribute binding -->
+        <a :href="url">best website ever</a>
+
+    </div>
+
+    <script src = "app.js"></scriptsrc>
+</body>
+</html>
