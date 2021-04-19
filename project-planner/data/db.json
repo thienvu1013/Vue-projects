@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Create new homepage banner hello whoat",
+      "details": "Lorem ipsum",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "title": "Make marketing email",
+      "details": "Lorem ipsum",
+      "complete": true
+    },
+    {
+      "title": "hege",
+      "details": "vdfvdfbvdb",
+      "complete": false,
+      "id": 3
+    },
+    {
+      "title": "fgbfb",
+      "details": "fgvb",
+      "complete": false,
+      "id": 4
+    }
+  ]
+}
